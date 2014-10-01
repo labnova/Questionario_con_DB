@@ -1,0 +1,15 @@
+function trovaDomanda() {
+
+
+	}
+
+
+
+SELECT domanda.domanda, 
+								   domanda.rispostaEsatta, 
+								   risposta.risposta1, 
+								   risposta.risposta2, 
+								   risposta.risposta3, 
+								   risposta.spiegazione1,
+								   risposta.spiegazione2, 
+								   risposta.spiegazione3  FROM domanda, risposta WHERE domanda.idMeeting='1' AND domanda.idDomanda==risposta.idDomanda ORDER BY rand() LIMIT 15 
